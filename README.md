@@ -1,7 +1,9 @@
 # django-todo-api 📝
 A simple To Do API built with Django and djangorestframework. 
 
-Utilizes ModelViewSet, which abstracts away the method handlers and provides operations or actions instead. URL routing is handled by DefaultRouter. TRULY MAGIC.
+This API utilizes ModelViewSet, which abstracts away the method handlers and provides operations or actions instead. URL routing is handled by DefaultRouter. TRULY MAGIC. 
+
+I chose Django specifically because it was incredibly easy to get started (opinionated framework, batteries included), and djangorestframework made it extra easy to create the API.
 
 ## Table of Contents 📑
 * [Built with](#built-with)
