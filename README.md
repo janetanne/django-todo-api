@@ -56,7 +56,23 @@ Start the server from the command line:
 $ python manage.py runserver
 ```
 
-Navigate to 'http://127.0.0.1:8000/' in your browser.
+The server may recommend making the data migrations. If so, quit the server, and run this:
+```
+$ python manage.py makemigrations
+
+Migrations for 'todo_api':
+  todo_api/migrations/0001_initial.py
+    - Create model ToDo
+
+$ python manage.py migrate
+
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, myapi, sessions
+Running migrations:
+  Applying myapi.0001_initial... OK
+```
+
+Navigate to 'http://127.0.0.1:8000/todos' in your browser.
 
 ## <a name="Endpoints"></a>Endpoints 👩🏻‍💻
 
