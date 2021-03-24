@@ -3,3 +3,6 @@ secrets.sh
 .DS_Store
 .env
 *.sqlite3
+__pycache__
+*.log
+.vscode
