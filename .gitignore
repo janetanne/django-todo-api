@@ -1,0 +1,5 @@
+secrets.sh
+*.pyc
+.DS_Store
+.env
+*.sqlite3
