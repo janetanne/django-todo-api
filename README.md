@@ -67,9 +67,9 @@ Migrations for 'todo_api':
 $ python manage.py migrate
 
 Operations to perform:
-  Apply all migrations: admin, auth, contenttypes, myapi, sessions
+  Apply all migrations: admin, auth, contenttypes, todo_api, sessions
 Running migrations:
-  Applying myapi.0001_initial... OK
+  Applying todo_api.0001_initial... OK
 ```
 
 Navigate to 'http://127.0.0.1:8000/todos' in your browser.
