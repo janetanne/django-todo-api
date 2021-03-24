@@ -128,4 +128,5 @@ Deletes todo and returns nothing. Successful response is HTTP 204 status code.
 
 ## <a name="testing"></a>Testing 🧪
 
-will be added soon!
+<a href="https://www.getpostman.com/collections/2f943a18e385e21284b6">Postman Collection</a>
+More to come!
