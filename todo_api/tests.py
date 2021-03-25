@@ -34,12 +34,11 @@ class ToDoTestCase(APITestCase):
         expected_status = status.HTTP_200_OK
         self.assertEqual(response.status_code, expected_status)
 
-    # this test doesn't work because it has the updated_at and completed_at - need to fix
     def test_complete_todo(self):
         data = {"completed":True}
         response = self.client.patch('/todos/2', data)
-        expected_todo = {"id":2,"description":"Add dummy task", "complete":True}
-        self.assertContains(response.data, expected_todo)
+        completed_todo = ToDo.objects.get(id=2)
+        self.assertEqual(completed_todo.completed, True)
     
     def test_delete_todo(self):
         response = self.client.delete('/todos/3')
@@ -50,5 +49,4 @@ class ToDoTestCase(APITestCase):
         response = self.client.get('/todos/5')
         expected_status = status.HTTP_404_NOT_FOUND
         self.assertEqual(response.status_code, expected_status)
-    
 
