@@ -95,6 +95,25 @@ Response:
 ]
 ```
 
+
+### GET /todos/:id
+Returns single todo. 
+Successful response is HTTP 200 status code.
+
+Response:
+```
+[
+    {
+        "id": integer,
+        "description": string,
+        "completed": boolean,
+        "created_at": datetime,
+        "updated_at": datetime
+    },
+]
+```
+
+
 ### POST /todos
 Creates a new todo and returns it. Completed property defaults to False.
 Successful response is HTTP 201 status code.
