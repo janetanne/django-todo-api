@@ -79,7 +79,8 @@ Navigate to 'http://127.0.0.1:8000/todos' in your browser.
 This was built with REST API best practices in mind.
 
 ### GET /todos
-Returns all todos.
+Returns all todos. 
+Successful response is HTTP 200 status code.
 
 Response:
 ```
@@ -96,6 +97,7 @@ Response:
 
 ### POST /todos
 Creates a new todo and returns it. Completed property defaults to False.
+Successful response is HTTP 201 status code.
 
 Example request:
 ```
@@ -116,10 +118,10 @@ Response:
 }
 ```
 
-Error handling:
 
 ### PATCH /todos/:id
 Updates a todo and returns it. Can change either the "description" or "completed" properties here; does not need both to update the todo.
+Successful response is HTTP 200 status code.
 
 Example request for todos/5:
 ```
@@ -139,12 +141,20 @@ Response:
 }
 ```
 
-Error handling:
 
 ### DELETE /todos/:id
-Deletes todo and returns nothing. Successful response is HTTP 204 status code.
+Deletes todo and returns nothing. 
+Successful response is HTTP 204 status code.
 
 ## <a name="testing"></a>Testing 🧪
+
+To run tests, be sure to activate your virtualenv and secrets.sh.
+
+```
+$ source .env/bin/activate
+$ source secrets.sh
+$ python ./manage.py test
+```
 
 <a href="https://www.getpostman.com/collections/2f943a18e385e21284b6">Postman Collection</a>
 
